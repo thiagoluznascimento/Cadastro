@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Admin\CadastroController; //importando o controlador para poder chamar a rota aqui. seguindo a doc laravel8
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,8 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
+Route::get('/', [CadastroController::class, 'CadastroUser']); //estou chamando o controlador na rota principal depois chamo o metodo desse controlador (CadastroUser).
+// Route::get('/Filmes', [FilmesController::class, 'Filmes']);
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
