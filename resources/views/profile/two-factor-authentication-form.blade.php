@@ -1,18 +1,18 @@
-<x-jet-action-section>
+{{-- <x-jet-action-section>
     <x-slot name="title">
-        {{ __('Two Factor Authentication') }}
+        {{ __('Autenticação de dois fatores') }}
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Add additional security to your account using two factor authentication.') }}
+        {{ __('Adicione segurança adicional à sua conta usando autenticação de dois fatores.') }}
     </x-slot>
 
     <x-slot name="content">
         <h3 class="text-lg font-medium text-gray-900">
             @if ($this->enabled)
-                {{ __('You have enabled two factor authentication.') }}
+                {{ __('Você habilitou a autenticação de dois fatores.') }}
             @else
-                {{ __('You have not enabled two factor authentication.') }}
+                {{ __('Você não ativou a autenticação de dois fatores.') }}
             @endif
         </h3>
 
@@ -80,4 +80,4 @@
             @endif
         </div>
     </x-slot>
-</x-jet-action-section>
+</x-jet-action-section> --}}

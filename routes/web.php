@@ -13,12 +13,12 @@ use App\Http\Controllers\Admin\CadastroController; //importando o controlador pa
 |
 */
 
-Route::get('/', [CadastroController::class, 'CadastroUser']); //estou chamando o controlador na rota principal depois chamo o metodo desse controlador (CadastroUser).
+// Route::get('/', [CadastroController::class, 'CadastroUser']); //estou chamando o controlador na rota principal depois chamo o metodo desse controlador (CadastroUser).
 // Route::get('/Filmes', [FilmesController::class, 'Filmes']);
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
     return view('dashboard');
 })->name('dashboard');

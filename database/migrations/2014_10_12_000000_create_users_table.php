@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('last_name', 36);
             $table->string('titration', 36)->nullable();
             $table->integer('cpf')->nullable();
-            $table->string('rg', 9)->nullable();
+            $table->integer('rg')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
