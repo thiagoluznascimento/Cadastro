@@ -15,8 +15,10 @@ class CreateFavoriteMoviesTable extends Migration
     {
         Schema::create('favorite_movies', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')
+                ->onUpdate('cascade')
+                ->onUpdate('cascade');
             $table->string('title',36);
             $table->integer('release_year');
             $table->string('director',36);
