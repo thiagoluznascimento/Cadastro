@@ -20,15 +20,15 @@ use App\Http\Controllers\UserController;
 Route::middleware(['auth:sanctum', 'verified'])->get('/', [UserController::class, 'dashboard'])->name('dashboard');
 
 
-Route::get('enderecos', [AddressController::class, 'index'])->name('enderecos');
-Route::post('enderecos/salvar', [AddressController::class, 'insertAddress']);
-Route::get('enderecos/{id_address}', [AddressController::class, 'index']);
-Route::post('enderecos/editar/salvar', [AddressController::class, 'updateAddress']);
-Route::get('enderecos/excluir/{id_address}',[AddressController::class, 'deleteAddress']);
+Route::get('enderecos', [AddressController::class, 'index'])->middleware(['auth'])->name('enderecos');
+Route::post('enderecos/salvar', [AddressController::class, 'insertAddress'])->middleware(['auth']);
+Route::get('enderecos/{id_address}', [AddressController::class, 'index'])->middleware(['auth']);
+Route::post('enderecos/editar/salvar', [AddressController::class, 'updateAddress'])->middleware(['auth']);
+Route::get('enderecos/excluir/{id_address}',[AddressController::class, 'deleteAddress'])->middleware(['auth']);
 
-Route::get('filmes', [FavoriteMovieController::class, 'index'] )->name('filmes');
-Route::post('filmes/salvar', [FavoriteMovieController::class, 'insertMovie']);
-Route::get('filmes/{id_movie}', [FavoriteMovieController::class, 'index']);
-Route::post('filmes/editar/salvar', [FavoriteMovieController::class, 'updateMovie']);
-Route::get('filmes/excluir/{id_movie}',[FavoriteMovieController::class, 'deleteMovie']);
+Route::get('filmes', [FavoriteMovieController::class, 'index'] )->middleware(['auth'])->name('filmes');
+Route::post('filmes/salvar', [FavoriteMovieController::class, 'insertMovie'])->middleware(['auth']);
+Route::get('filmes/{id_movie}', [FavoriteMovieController::class, 'index'])->middleware(['auth']);
+Route::post('filmes/editar/salvar', [FavoriteMovieController::class, 'updateMovie'])->middleware(['auth']);
+Route::get('filmes/excluir/{id_movie}',[FavoriteMovieController::class, 'deleteMovie'])->middleware(['auth']);
 
