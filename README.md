@@ -1,3 +1,12 @@
+   
+Saudações, venho dizer que o teste foi de grande importância e aprendizado!
+e que possamos resolver vários desafios como esse.
+Para esse projeto, usei o jetstream do laravel, para cadastro e login.
+Quero reportar também, que não conseguir solucionar o campo CPF que se encontra dentro do perfil do Usuário. 
+Sempre que coloco 'interger' o campo 'cpf' que está em app\Actions\Forttify\UpdateUserProfileInformation.php , dá um erro. 
+esse erro eu nao cheguei a resolver até por questões de tempo tbm. 
+contei com a ajuda do 'Google', e um aimigo, Murillo.
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
